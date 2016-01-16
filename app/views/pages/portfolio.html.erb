@@ -41,5 +41,9 @@
 </div>
 </div>
 
-
-
+<% @work_images.each do |work_images| %>
+    <%= image_tag work_images.image, :size=>"440x330", :class=>"center-block" %>
+    <div class="font_blog">
+      <%= work_images.description %> <br>
+    </div>
+<%end%>

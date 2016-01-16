@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def portfolio
+    @work_images = Work.all
   end
 
   def blog

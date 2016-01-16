@@ -1,9 +1,9 @@
 <div class="blog">
-<% @posts.each do |post|%>
-<%= image_tag post.image, :size=>"440x330", :class=>"center-block" %>
-    <div class="font_blog">
-    <%= post.description %> <br>
-    <%= post.created_at.strftime("%B %Y") %>
-    </div>
-<%end%>
+  <% @posts.each do |post|%>
+      <%= image_tag post.image, :size=>"440x330", :class=>"center-block" %>
+      <div class="font_blog">
+        <%= post.description %> <br>
+        <%= post.created_at.strftime("%B %Y") %>
+      </div>
+  <%end%>
 </div>
