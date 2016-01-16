@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="assets/dist/css/unslider.css">
+  <link rel="stylesheet" href="assets/dist/css/unslider-dots.css">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navbar">
+   <%= link_to 'Welcome', root_path %>
+    <%= link_to 'Work', 'portfolio' %>
+    <%= link_to 'About', 'about' %>
+    <%= link_to 'Blog', 'blog' %>
+  <div class="navbar_name"> Krystian Guzara </div>
+</div>
+
+<!-- There'll be a load of other stuff here -->
+<%= yield %>
+
+<div class="footer">
+  <div class="footer_copy">&copy;Copyright 2016 Krystian Guzara </div>
+  <div class="footer_icons">
+    <%= link_to image_tag('linkedin.png', size:"20x20"), 'https://www.linkedin.com/in/krystian-guzara-96297269?trk=hp-identity-name', :target => "_blank"%>
+    <%= link_to image_tag('facebook.png', size:"20x20"), 'https://www.facebook.com/krystian.guzara', :target => "_blank" %>
+    <%= mail_to "krystian.guzara@gmail.com", image_tag('mail.png', size:"20x20")%>
+
+   </div>
+</div>
+</body>
+</html>

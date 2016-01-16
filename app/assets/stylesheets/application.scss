@@ -1,0 +1,177 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-compass";
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,500italic&subset=latin,greek);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,greek);
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+  font-size: 20px;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-left: 17%;
+  margin-right: 17%;
+  color: #000000;
+  word-spacing: 25px;
+}
+
+.navbar_name{
+  float: right;
+  word-spacing: 5px;
+}
+
+.footer{
+  margin-top: 1%;
+  margin-bottom: 4%;
+  margin-right: 17%;
+  margin-left: 17%;
+  font-size: 14px;
+}
+
+.footer_copy{
+  float: left;
+}
+
+.footer_icons{
+  float: right;
+}
+
+.welcome_bg_image{
+  background-image: image-url("tlo3.jpg");
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg_image_item1{
+  position: relative;
+  float: right;
+  padding-right: 17%;
+  padding-top: 0.5%;
+  text-align: right;
+  color: white;
+  font-size: 40px;
+}
+
+.bg_image_item2{
+  position: relative;
+  font-weight: 300;
+  color:white;
+  font-size: 24px;
+  padding-top: 15%;
+  padding-left: 18%;
+  letter-spacing: 5px;
+}
+
+.bg_image_item3{
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 160px;
+  background-color: white;
+  filter:alpha(opacity=40);
+  opacity: 0.4;
+  -moz-opacity:0.4;
+  margin-right: 20%;
+  margin-top: 5%;
+  float: right;
+  text-decoration: none;
+}
+
+.bg_image_item3:hover{
+  background-color: darkgrey;
+  text-decoration: none;
+}
+
+a:link{
+  color: black;
+}
+
+a:visited{
+  color: black;
+}
+
+.grid{
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.font_grid_portfolio{
+  line-height: 30px;
+  font-weight: 300;
+  color: grey;
+  font-size: 16px;
+  text-align: center;
+}
+
+.font_grid_about_2{
+  line-height: 30px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.font_grid_about_3{
+  line-height: 30px;
+  font-weight: 300;
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 3%;
+}
+
+.image_link:hover{
+  filter:alpha(opacity=70);
+  opacity: 0.7;
+  -moz-opacity:0.7;
+  align-items: center;
+}
+
+.blog{
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.font_blog{
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300;
+  color: grey;
+  margin-top: 5px;
+}
+
+.font_about_short_story{
+  font-size: 28px;
+  font-weight: 300;
+  color: grey;
+  line-height: 31px;
+  text-align: justify;
+}
+
+.font_about_long_story{
+  font-size: 14px;
+  font-weight: 300;
+  color: grey;
+  line-height: 22px;
+  text-align: justify;
+}
