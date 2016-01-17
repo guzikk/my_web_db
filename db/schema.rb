@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160116123502) do
   create_table "works", force: :cascade do |t|
     t.string   "image"
     t.string   "description"
+    t.string   "link"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

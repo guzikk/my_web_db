@@ -1,49 +1,27 @@
-<!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
-
+<!-- data from table Work -->
 <div class="grid">
-<div class="row">
-  <div class="col-sm-4 col-sm-offset-2">
-    <div class="image_link"> <%= link_to image_tag('fitness_min.png', size: "400x300", :class => "center-block"), 'http://fitnessworkout.pl', :target => "_blank"%> </div>
-  <div class="font_grid_portfolio">FITNESSWORKOUT; DESIGN & DEVELOPMENT </div>
-  </div>
-  <div class="col-sm-4 ">
-    <div class="image_link">  <%= link_to image_tag('bass_music_min.png', size: "400x300", :class => "center-block"), 'https://bass-music-rails.herokuapp.com/albums', :target => "_blank"%> </div>
-  <div class="font_grid_portfolio">BASSMUSIC; DEVELOPMENT </div>
-  </div>
+  <%inx_sym=0%>
+  <%for i in 1..(@work_images.size/2) %>
+      <div class="row">
+        <div class="col-sm-2"> </div>
+        <!-- two examples of sites in one row -->
+            <% @work_images.each_with_index do |work_images2,inx2 | %>
+                       <% if inx2 >= inx_sym %>
+                        <div class="col-sm-4">
+                          <div class="image_link"> <%= link_to image_tag(work_images2.image, size: "400x300", :class => "center-block"), work_images2.link, :target => "_blank"%> </div>
+                          <div class="font_grid_portfolio"> <%= work_images2.description %> </div>
+                        </div>
+                            <%if inx2 % 2 !=0 %>
+                                <%inx_sym=inx2+1%>
+                                <% break %>
+                            <%end%>
+                        <%end%>
+            <%end%>
+      </div>
+      <div class="row">
+        <br><br>
+      </div>
+  <%end%>
 </div>
 
-  <div class="row">
-  <br><br>
-  </div>
 
- <div class="row">
-   <div class="col-sm-4 col-sm-offset-2">
-     <div class="image_link"><%= link_to image_tag('bolt_network_min.png', size: "400x300", :class => "center-block"), 'https://bolt-network-rails.herokuapp.com/', :target => "_blank"%></div>
-     <div class="font_grid_portfolio">BOLTNETWORK; DEVELOPMENT </div>
-   </div>
-  <div class="col-sm-4">
-    <div class="image_link"><%= link_to image_tag('Innovation_cloud_min.png', size: "400x300", :class => "center-block"), 'https://innovation-cloud-rails.herokuapp.com/', :target => "_blank"%></div>
-    <div class="font_grid_portfolio">INNOVATIONCLOUD; DEVELOPMENT </div>
-  </div>
-</div>
-
-<div class="row">
-  <br><br>
-</div>
-
- <div class="row">
-   <div class="col-sm-4 col-sm-offset-2"><%= image_tag('messages_min.png', size: "400x300", :class => "center-block")%>
-   <div class="font_grid_portfolio">MESSAGER; DEVELOPMENT </div>
-   </div>
-  <div class="col-sm-4"><%= image_tag('movies_min.png', size: "400x300", :class => "center-block")%>
-   <div class="font_grid_portfolio">MOVIES; DEVELOPMENT </div>
-  </div>
-</div>
-</div>
-
-<% @work_images.each do |work_images| %>
-    <%= image_tag work_images.image, :size=>"440x330", :class=>"center-block" %>
-    <div class="font_blog">
-      <%= work_images.description %> <br>
-    </div>
-<%end%>

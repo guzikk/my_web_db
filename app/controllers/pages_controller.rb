@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 
   def portfolio
     @work_images = Work.all
-  end
+    end
 
   def blog
     @posts = Post.all

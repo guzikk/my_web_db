@@ -4,12 +4,10 @@
   <title>Portfolio</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="assets/dist/css/unslider.css">
-  <link rel="stylesheet" href="assets/dist/css/unslider-dots.css">
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<!-- navigation bar -->
 <div class="navbar">
    <%= link_to 'Welcome', root_path %>
     <%= link_to 'Work', 'portfolio' %>
@@ -21,6 +19,8 @@
 <!-- There'll be a load of other stuff here -->
 <%= yield %>
 
+
+<!-- footer -->
 <div class="footer">
   <div class="footer_copy">&copy;Copyright 2016 Krystian Guzara </div>
   <div class="footer_icons">
