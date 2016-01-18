@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def portfolio
     @work_images = Work.all
+    @inx_sym=0
     end
 
   def blog
